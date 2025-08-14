@@ -19,13 +19,21 @@
 }
 </style>
 
+<style>
+@import url('../css/styles.css');
+</style>
+
 <script>
 import Home from './views/Home.vue'
 
 export default {
   components: { Home }
 }
+
+
 </script>
+
+
 
 <style>
 
@@ -35,3 +43,4 @@ export default {
   color: #0d6efd !important; /* Bootstrap primary */
 }
 </style>
+

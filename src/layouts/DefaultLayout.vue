@@ -11,11 +11,6 @@
   </div>
 </template>
 
-
-<style>
-@import url('./css/styles.css');
-</style>
-
 <script>
 import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
