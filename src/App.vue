@@ -1,5 +1,6 @@
+<!-- src/App.vue -->
 <template>
-  <Home />
+  <router-view />
 </template>
 
 <script>
