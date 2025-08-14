@@ -8,8 +8,8 @@ export const useAuthStore = defineStore('auth', {
   }),
   actions: {
     login(userData) {
-      this.user = userData.user
-      this.token = userData.token
+      this.user = userData.name
+      this.token = userData.name
     },
     logout() {
       this.user = null

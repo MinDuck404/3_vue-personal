@@ -1,12 +1,17 @@
 <script setup>
-import { useAuthStore } from '@/stores/auth'
-const auth = useAuthStore()
+import { onMounted } from 'vue'
+import { useUserStore } from '@/stores/user'
 
-auth.login({ user: { name: 'Thanh' }, token: 'abc123' })
+const userStore = useUserStore()
+
+onMounted(() => {
+  userStore.fetchUser()
+})
 </script>
 
 <template>
-  <div v-if="auth.user">
-    Welcome, {{ auth.user.name }}
+  <div v-if="userStore.loading">Loading...</div>
+  <div v-else>
+    <p>Welcome, {{ userStore.profile?.name }}</p>
   </div>
 </template>
