@@ -13,6 +13,8 @@ const routes = [
   { path: '/contact', name: 'Contact', component: Contact },
   { path: '/test', name: 'Test', component: () => import('@/views/Test.vue') },
   { path: '/form', name: 'Form', component: () => import('@/views/Form.vue') },
+  {path: '/login', name: 'Login', component: () => import('@/pages/Login.vue') },
+  {path: '/register', name: 'Register', component: () => import('@/pages/Register.vue') },
 ]
 
 const router = createRouter({
