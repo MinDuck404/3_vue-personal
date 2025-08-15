@@ -22,9 +22,21 @@
   import { useCounter } from '@/composables/useCounter'
   const { count, increment, decrement } = useCounter()
 
+  // script cho component
+  import { ref } from 'vue'
+  import A from '@/components/About.vue'
+  import B from '@/components/Contact.vue'
+  const currentComponent = ref(A)
 </script>
 
 <template>
+  <component :is="currentComponent">
+
+  </component>
+  <button @click="currentComponent = A">About</button>
+  <button @click="currentComponent = B">Contact</button>
+
+  
   <div v-if="userStore.loading">Loading...</div>
   <div v-else>
     <p>Welcome, {{ userStore.profile?.name }}</p>
